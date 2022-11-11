@@ -3,24 +3,25 @@
     int number = 1;
     int col = 0;
     int r = 0;
+    int row = 0;
 
     if (n % 2 == 0)
     {
-        for (int row = 0; row < n / 2; row++)
+        for (row = 0; row < n / 2; row++)
         {
-            for (col = 0; col < n - row; col++)
+            for (col = row; col < n - row; col++)
             {
                 a[row,col] = number++;
             }
-            for (r = row + 1; r < n - row; r++)
+            for (r = row + 1 ; r < n - row; r++)
             {
                 a[r,n - 1 - row] = number++;
             }
-            for (col = n - row - 2; col >= row; col--)
+            for (col = n - row - 2; col > row; col--)
             {
-                a[n - 1 -row,col] = number++;
+                a[n - 1 - row,col] = number++;
             }
-            for (r = n - 2 - row; r > row; r--)
+            for (r = n - row - 1; r > row; r--)
             {
                 a[r,row] = number++;
             }        
@@ -28,26 +29,25 @@
     }
     else
     {
-        for (int row = 0; row <= n / 2; row++)
+        for (row = 0; row <= n / 2; row++)
         {
-            for (col = 0; col < n - row; col++)
+            for (col = row; col < n - row; col++)
             {
                 a[row,col] = number++;
             }
-            for (r = row + 1; r < n - row; r++)
+            for (r = row + 1 ; r < n - row; r++)
             {
                 a[r,n - 1 - row] = number++;
             }
-            for (col = n - row - 2; col >= row; col--)
+            for (col = n - row - 2; col > row; col--)
             {
-                a[n - 1 -row,col] = number++;
+                a[n - 1 - row,col] = number++;
             }
-            for (r = n - 2 - row; r > row; r--)
+            for (r = n - row - 1; r > row; r--)
             {
                 a[r,row] = number++;
-            }                   
+            }        
         }
-
     }
     
 }
