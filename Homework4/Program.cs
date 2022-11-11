@@ -52,24 +52,6 @@ void CreateMatrix( int[,,] a)
     }
 }
 
-/*void PrintMatrix(int[,,] matrix)
-{
-    for(int row = 0; row < matrix.GetLength(0); row++)
-    {
-        for (int col = 0; col < matrix.GetLength(1); col++)
-        {            
-            for (int height = 0; height < matrix.GetLength(2); height++)
-            {
-                Console.Write($"{matrix[height,row,col]}({row}, {col}, {height}); ");
-            }
-
-                          
-        } 
-        
-        Console.WriteLine();               
-    }    
-}*/
-
 void PrintMatrix(int[,,] matrix)
 {
     for (int row = 0; row < matrix.GetLength(0); row++)
